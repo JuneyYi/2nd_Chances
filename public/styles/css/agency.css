@@ -1,8 +1,4 @@
-/*!
- * Start Bootstrap - Agency v5.2.1 (https://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
- */
+
 
 body {
   overflow-x: hidden;
@@ -110,6 +106,7 @@ img::-moz-selection {
 
 #mainNav {
   background-color: #212529;
+  
 }
 
 #mainNav .navbar-toggler {
@@ -176,7 +173,7 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("../img/header-bg.jpg");
+  background-image: url("../img/header-bg8.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -590,11 +587,34 @@ header.masthead .intro-text .intro-heading {
   margin-top: 0;
 }
 
-section#contact {
+/*ViewPets++++++++++++++++++++*/
+#viewPet
+  {
+  background-color:  #909fb8;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-position: cover;
+  height: 850px;
+  }
+
+  #petGallery {
+  background-color:  #909fb8;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-position: cover;
+  
+  
+ }
+
+/* contact CONTAINER***********************************************************/
+section#contact  {
   background-color: #212529;
   background-image: url("../img/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 900px;
+  
+ 
 }
 
 section#contact .section-heading {
