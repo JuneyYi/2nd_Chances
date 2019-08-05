@@ -105,7 +105,7 @@ img::-moz-selection {
 }
 
 #mainNav {
-  background-color: #212529;
+  
   
 }
 
@@ -116,17 +116,20 @@ img::-moz-selection {
   text-transform: uppercase;
   color: white;
   border: 0;
-  background-color: #fed136;
+  
+  
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 #mainNav .navbar-brand {
   color: #fed136;
+  
   font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
   color: #fec503;
+  
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -135,11 +138,13 @@ img::-moz-selection {
   padding: 0.75em 0;
   letter-spacing: 1px;
   color: white;
+  
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #fed136;
+  
 }
 
 @media (min-width: 992px) {
@@ -150,6 +155,7 @@ img::-moz-selection {
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
     background-color: transparent;
+    
   }
   #mainNav .navbar-brand {
     font-size: 1.75em;
@@ -162,7 +168,7 @@ img::-moz-selection {
   #mainNav.navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
-    background-color: #212529;
+    
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -590,7 +596,7 @@ header.masthead .intro-text .intro-heading {
 /*ViewPets++++++++++++++++++++*/
 #viewPet
   {
-  background-color:  #909fb8;
+  background-color:  #ffffff;
   background-image: url("");
   background-repeat: no-repeat;
   background-position: cover;
@@ -598,10 +604,11 @@ header.masthead .intro-text .intro-heading {
   }
 
   #petGallery {
-  background-color:  #909fb8;
+  background-color:  #ffffff;
   background-image: url("");
   background-repeat: no-repeat;
   background-position: cover;
+  
   
   
  }
@@ -671,6 +678,7 @@ section#contact :-ms-input-placeholder {
 .footer {
   padding: 25px 0;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.692);
 }
 
 .footer span.copyright {
@@ -709,3 +717,5 @@ ul.social-buttons li a {
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
   background-color: #fed136;
 }
+
+
