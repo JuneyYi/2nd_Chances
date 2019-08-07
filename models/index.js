@@ -36,6 +36,17 @@ Object.keys(db).forEach(function(modelName) {
   }
 });
 
+module.exports = function(sequelize, DataTypes) {
+  var Animal = sequelize.define("Animal", {
+    typePet: DataTypes.STRING,
+    breedPet: DataTypes.STRING,
+    namePet: DataTypes.STRING,
+    genderPet: DataTypes.STRING,
+  });
+  return Animal;
+};
+
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
