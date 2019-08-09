@@ -1,38 +1,38 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
-var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
-
+var $typePet = $("#typePet");
+var $typeBreed = $("#typeBreed");
+var $petName = $("#petName");
+var $petGender = $("#petGender");
+ 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function(example) {
+  savePet: function(example) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/examples",
+      url: "api/pet",
       data: JSON.stringify(example)
     });
   },
-  getExamples: function() {
+  getPet: function() {
     return $.ajax({
-      url: "api/examples",
+      url: "api/pet",
       type: "GET"
     });
   },
-  deleteExample: function(id) {
+  deletePet: function(id) {
     return $.ajax({
-      url: "api/examples/" + id,
+      url: "api/pet/" + id,
       type: "DELETE"
     });
   }
 };
 
 // refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
+var refreshPet = function() {
+  API.getPet().then(function(data) {
     var $examples = data.map(function(example) {
       var $a = $("<a>")
         .text(example.text)
@@ -64,22 +64,26 @@ var refreshExamples = function() {
 var handleFormSubmit = function(event) {
   event.preventDefault();
 
-  var example = {
-    text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
+  var pet = {
+    typePet: $typePet.val().trim(),
+    typeBreed: $typeBreed.val().trim(),
+    petName: $petName.val().trim(),
+    petGender: $petGender.val().trim(),
   };
 
-  if (!(example.text && example.description)) {
-    alert("You must enter an example text and description!");
-    return;
-  }
+  // if (!(animal.typePet && animal.typeBreed && animal.petName && animal.petGender)) {
+  //   alert("You must enter an example text and description!");
+  //   return;
+  // }
 
-  API.saveExample(example).then(function() {
+  API.savePet(pet).then(function() {
     refreshExamples();
   });
 
-  $exampleText.val("");
-  $exampleDescription.val("");
+  $typePet.val("");
+  $typeBreed.val("");
+  $petName.val("");
+  $petGender.val("");
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
@@ -89,11 +93,11 @@ var handleDeleteBtnClick = function() {
     .parent()
     .attr("data-id");
 
-  API.deleteExample(idToDelete).then(function() {
+  API.deletePet(idToDelete).then(function() {
     refreshExamples();
   });
 };
 
 // Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
+$('#submitBtn').on("click", handleFormSubmit);
+//$('exampleList').on("click", ".delete", handleDeleteBtnClick);
