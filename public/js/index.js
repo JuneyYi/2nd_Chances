@@ -3,7 +3,7 @@ var $typePet = $("#typePet");
 var $typeBreed = $("#typeBreed");
 var $petName = $("#petName");
 var $petGender = $("#petGender");
-
+ 
 // The API object contains methods for each kind of request we'll make
 var API = {
   savePet: function(example) {
@@ -63,7 +63,6 @@ var refreshPet = function() {
 // Save the new example to the db and refresh the list
 var handleFormSubmit = function(event) {
   event.preventDefault();
-  console.log("ryan sucks. he helped me with nothing")
 
   var pet = {
     typePet: $typePet.val().trim(),
@@ -101,4 +100,4 @@ var handleDeleteBtnClick = function() {
 
 // Add event listeners to the submit and delete buttons
 $('#submitBtn').on("click", handleFormSubmit);
-$('exampleList').on("click", ".delete", handleDeleteBtnClick);
+//$('exampleList').on("click", ".delete", handleDeleteBtnClick);

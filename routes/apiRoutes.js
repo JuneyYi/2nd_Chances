@@ -7,16 +7,17 @@ module.exports = function(app) {
     //   res.json(dbPet);
     // });
     res.send("awewea");
+  }); 
+
+  //Create a new example
+  app.post("/register", function(req, res) {
+    // db.secondChances.create(req.body).then(function(dbPet) {
+    //   res.json(dbPet);
+    // });
+    console.log("hello");
   });
 
-  // Create a new example
-  app.post("/api/pet", function(req, res) {
-    db.secondChances.create(req.body).then(function(dbPet) {
-      res.json(dbPet);
-    });
-  });
-
-  // Delete an example by id
+  //Delete an example by id
   app.delete("/api/pet/:id", function(req, res) {
     db.secondChances.destroy({ where: { id: req.params.id } }).then(function(dbPet) {
       res.json(dbPet);
