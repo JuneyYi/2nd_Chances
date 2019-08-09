@@ -2,23 +2,24 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Animal.findAll({}).then(function(dbAnimal) {
-      res.json(dbAnimal);
-    });
+  app.get("/api/pet", function(req, res) {
+    // db.Pet.findAll({}).then(function(dbPet) {
+    //   res.json(dbPet);
+    // });
+    res.send("awewea");
   });
 
   // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Animal.create(req.body).then(function(dbAnimal) {
-      res.json(dbAnimal);
+  app.post("/api/pet", function(req, res) {
+    db.secondChances.create(req.body).then(function(dbPet) {
+      res.json(dbPet);
     });
   });
 
   // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Animal.destroy({ where: { id: req.params.id } }).then(function(dbAnimal) {
-      res.json(dbAnimal);
+  app.delete("/api/pet/:id", function(req, res) {
+    db.secondChances.destroy({ where: { id: req.params.id } }).then(function(dbPet) {
+      res.json(dbPet);
     });
   });
 };
